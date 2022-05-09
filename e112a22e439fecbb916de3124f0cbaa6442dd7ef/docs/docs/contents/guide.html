@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sphinx 편집 Guideline &mdash; battleground 0.1 문서</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="next" title="활용 Process" href="process.html" />
+    <link rel="prev" title="패키지 설명" href="instruction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> battleground
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="instruction.html">패키지 설명</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx 편집 Guideline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="process.html">활용 Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="offline_ab_test.html">Offline A/B 테스트</a></li>
+<li class="toctree-l1"><a class="reference internal" href="online_ab_test.html">Online A/B 테스트</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">APIs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">battleground</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">battleground</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Sphinx 편집 Guideline</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/contents/guide.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx-guideline">
+<h1>Sphinx 편집 Guideline<a class="headerlink" href="#sphinx-guideline" title="이 표제에 대한 퍼머링크"></a></h1>
+<ul class="simple">
+<li><p>설치하기</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install Spinx 
+$ pip install Sphinx
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>최초 build 하기</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sphinx-quickstart docs
+$ sphinx-build -b html docs/source/ docs/build/html
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>RTD theme 적용</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s1">&#39;sphinx_rtd_theme&#39;</span>  <span class="c1"># in conf.py file</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>markdown extention 적용</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install myst_parser
+$ pip install sphinxcontrib-napoleon
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;myst_parser&#39;</span><span class="p">]</span>
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;.rst&#39;</span><span class="p">:</span> <span class="s1">&#39;restructuredtext&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.txt&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>문서 편집할 때</p>
+<ul>
+<li><p>위 패키지 (Spinx, myst_parser) 설치</p></li>
+<li><p>contests 폴더 밑에 문서 작성 후,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sphinx-build</span> <span class="pre">-b</span> <span class="pre">html</span> <span class="pre">docs/source/</span> <span class="pre">docs/build/html</span></code> 혹은 <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">make</span> <span class="pre">build</span></code></p></li>
+<li><p>모듈 구성이 변경되었을 때는</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sphinx-apidoc</span> <span class="pre">-F</span> <span class="pre">-o</span> <span class="pre">./docs/source</span> <span class="pre">./battleground</span></code>  수행해서 source밑에 <code class="docutils literal notranslate"><span class="pre">.rst</span></code> 파일을 업데이트해주고 build를 재수행</p></li>
+</ul>
+</li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="instruction.html" class="btn btn-neutral float-left" title="패키지 설명" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="process.html" class="btn btn-neutral float-right" title="활용 Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, Customer Analytics, SKT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

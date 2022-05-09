@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>패키지 설명 &mdash; battleground 0.1 문서</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="next" title="Sphinx 편집 Guideline" href="guide.html" />
+    <link rel="prev" title="Welcome to battleground’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> battleground
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">패키지 설명</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">구조</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="guide.html">Sphinx 편집 Guideline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="process.html">활용 Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="offline_ab_test.html">Offline A/B 테스트</a></li>
+<li class="toctree-l1"><a class="reference internal" href="online_ab_test.html">Online A/B 테스트</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">APIs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">battleground</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">battleground</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>패키지 설명</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/contents/instruction.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>패키지 설명<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h1>
+<section id="id2">
+<h2>구조<a class="headerlink" href="#id2" title="이 표제에 대한 퍼머링크"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>battleground
+│   Readme.md
+└───model
+│   │   data.py
+│   │   train.py
+│   │   eval.py
+│   │   serve.py
+└──experiment
+    │   register.py
+    │   report.py
+    │   ab_test.py
+    │   monitoring.py
+</pre></div>
+</div>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="이 표제에 대한 퍼머링크"></a></h2>
+<ul class="simple">
+<li><p>여러 실험들의 전투장</p></li>
+</ul>
+<hr class="docutils" />
+<p>사용 예제 sudo code</p>
+<blockquote>
+<div><p>model</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">model.data</span></code></p>
+<ul class="simple">
+<li><p>데이터 전처리, Features 선택, train/valid/test 셋 생성 등의 작업</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">battleground.model.data</span> <span class="kn">import</span> <span class="n">Preprocess</span><span class="p">,</span> <span class="n">FeatureSelection</span><span class="p">,</span> <span class="n">CreateDataSet</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">CreateDataSet</span><span class="p">(</span><span class="n">feature_list</span><span class="o">=</span><span class="p">[],</span> <span class="n">train_dt</span><span class="o">=</span><span class="p">[],</span> <span class="n">infer_dt</span><span class="o">=</span><span class="p">[])</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">load_train_set</span><span class="p">()</span>
+<span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">load_test_set</span><span class="p">()</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="n">FeatureSelection</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;lightgbm&#39;</span><span class="p">)</span>
+<span class="n">X_train_selected</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">X_test_selected</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="n">preprocess</span> <span class="o">=</span> <span class="n">Preprocess</span><span class="p">(</span><span class="n">numerical_features</span><span class="o">=</span><span class="p">[],</span> <span class="n">categorical_features</span><span class="o">=</span><span class="p">[],</span> <span class="n">imputation_methods</span><span class="o">=</span><span class="p">[])</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="n">preprocess</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+<span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">preprocess</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_text</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p><code class="docutils literal notranslate"><span class="pre">model.train</span></code></p>
+<ul class="simple">
+<li><p>모델 학습</p></li>
+<li><p>gbm 계열 모델에 대해 적절한 hyper parameter tuning 등</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">battleground.model.train</span> <span class="kn">import</span> <span class="n">Trainer</span>
+
+<span class="n">trainer</span> <span class="o">=</span> <span class="n">Trainer</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="s1">&#39;lightgbm&#39;</span><span class="p">)</span>
+<span class="n">fit_params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;categorical_features&#39;</span><span class="p">:</span><span class="n">categorical_features</span><span class="p">}</span>
+<span class="n">trainer</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_selected</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="o">**</span><span class="n">fit_params</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p><code class="docutils literal notranslate"><span class="pre">model.eval</span></code></p>
+<ul class="simple">
+<li><p>모델 성능평가</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">battleground.model.eval</span> <span class="kn">import</span> <span class="n">EvalRecommenderModel</span><span class="p">,</span> <span class="n">EvalClassifierModel</span><span class="p">,</span> <span class="n">EvalRegressorModel</span>
+
+<span class="n">pred</span> <span class="o">=</span> <span class="n">trainer</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">evaluator</span> <span class="o">=</span> <span class="n">EvalRecommenderModel</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;offline&#39;</span><span class="p">)</span>
+<span class="n">evaluator</span><span class="o">.</span><span class="n">get_importance_sampling</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="c1"># evaluator.get_capped_importance_sampling(pred, y_test)</span>
+<span class="c1"># evaluator.get_normalized_cis(pred, y_test)</span>
+
+<span class="n">evaluator</span> <span class="o">=</span> <span class="n">EvalClassifierModel</span><span class="p">()</span>
+<span class="n">evaluator</span><span class="o">.</span><span class="n">calculate</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><code class="docutils literal notranslate"><span class="pre">model.serve</span></code></p>
+<ul class="simple">
+<li><p>모델 성능평가</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">battleground.model.serve</span> <span class="kn">import</span> <span class="o">...</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<blockquote>
+<div><p>experiment</p>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p><code class="docutils literal notranslate"><span class="pre">experiment.register</span></code></p>
+<ul class="simple">
+<li><p>모델 실험 등록</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">battleground.experiment.register</span> <span class="kn">import</span> <span class="n">RegisterExperiment</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">RegisterExperiment</span><span class="p">(</span><span class="n">client</span><span class="o">=</span><span class="s1">&#39;10.x.x.x&#39;</span><span class="p">)</span> <span class="c1"># db</span>
+<span class="n">client</span><span class="o">.</span><span class="n">add_experiment</span><span class="p">(</span><span class="n">meta</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Galileo신규모델&quot;</span><span class="p">,</span> <span class="s2">&quot;실험시작일&quot;</span><span class="p">:</span><span class="s2">&quot;2022-03-05&quot;</span><span class="p">})</span>
+<span class="n">client</span><span class="o">.</span><span class="n">add_end_condition</span><span class="p">({</span><span class="s2">&quot;목표samplesize&quot;</span><span class="p">:</span><span class="mi">100</span><span class="p">})</span> <span class="c1"># 종료조건 입력</span>
+
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p><code class="docutils literal notranslate"><span class="pre">experiment.report</span></code></p>
+<ul class="simple">
+<li><p>실험 종료 이후 리포트 생성</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">battleground.experiment.report</span> <span class="kn">import</span> <span class="n">MakeReport</span>
+
+<span class="n">report</span> <span class="o">=</span> <span class="n">MakeReport</span><span class="p">()</span>
+<span class="n">cr</span> <span class="o">=</span> <span class="n">report</span><span class="o">.</span><span class="n">create_report</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="7">
+<li><p><code class="docutils literal notranslate"><span class="pre">experiment.ab_test</span></code></p>
+<ul class="simple">
+<li><p>ab 테스트에 필요한 정보들 계산</p></li>
+<li><p>ab 테스트 전에 적절한 sample_size 추정</p></li>
+<li><p>ab 테스트 p-value 계산</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># input : </span>
+<span class="kn">from</span> <span class="nn">battleground.experiment.ab_test</span> <span class="kn">import</span> <span class="n">ABTest</span>
+
+<span class="n">abtest</span> <span class="o">=</span> <span class="n">ABTest</span><span class="p">()</span>
+<span class="n">abtest</span><span class="o">.</span><span class="n">get_t_test</span><span class="p">()</span>
+<span class="n">abtest</span><span class="o">.</span><span class="n">get_sample_size</span><span class="p">()</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="8">
+<li><p><code class="docutils literal notranslate"><span class="pre">experiment.monotoring</span></code></p>
+<ul class="simple">
+<li><p>실험 진행중에 a/b 테스팅에 대한 monitoring</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># input : 실험 id, 실험기간 정보</span>
+<span class="c1"># output : 해당 기간 동안 성과 (CTR 등)</span>
+<span class="kn">from</span> <span class="nn">battleground.experiment.monitoring</span> <span class="kn">import</span> <span class="n">Monitor</span>
+
+<span class="n">monitor</span> <span class="o">=</span> <span class="n">Monitor</span><span class="p">(</span><span class="n">client</span><span class="o">=</span><span class="s1">&#39;1.1.1.1&#39;</span><span class="p">)</span>
+<span class="n">monitor</span><span class="o">.</span><span class="n">put_experiment_id</span><span class="p">(</span><span class="n">expeirment_id</span><span class="o">=</span><span class="s1">&#39;실험id&#39;</span><span class="p">)</span>
+<span class="n">monitor</span><span class="o">.</span><span class="n">get_abtest_result</span><span class="p">(</span><span class="n">start_dt</span><span class="o">=</span><span class="s1">&#39;2022-03-01&#39;</span><span class="p">,</span> <span class="n">end_dt</span><span class="o">=</span><span class="s1">&#39;2022-03-10&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to battleground’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="guide.html" class="btn btn-neutral float-right" title="Sphinx 편집 Guideline" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, Customer Analytics, SKT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
