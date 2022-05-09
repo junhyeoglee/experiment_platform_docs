@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>활용 Process &mdash; battleground 0.1 문서</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" />
+    <link rel="next" title="Offline A/B 테스트" href="offline_ab_test.html" />
+    <link rel="prev" title="Sphinx 편집 Guideline" href="guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> battleground
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="instruction.html">패키지 설명</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guide.html">Sphinx 편집 Guideline</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">활용 Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">프로세스 정리</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#part">모델 Part</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#model-evaluation-offline-test">Model Evaluation(Offline test)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#online-test">Online test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">실험 평가</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="offline_ab_test.html">Offline A/B 테스트</a></li>
+<li class="toctree-l1"><a class="reference internal" href="online_ab_test.html">Online A/B 테스트</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">APIs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">battleground</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">battleground</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>활용 Process</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/contents/process.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="process">
+<h1>활용 Process<a class="headerlink" href="#process" title="이 표제에 대한 퍼머링크"></a></h1>
+<section id="id1">
+<h2>프로세스 정리<a class="headerlink" href="#id1" title="이 표제에 대한 퍼머링크"></a></h2>
+<p>모델 개발 -&gt; offline test -&gt; online test -&gt; 실험 결과 평가</p>
+<p><img alt="Experiment Cycle" src="../_images/experiment_cycle.png" /></p>
+<hr class="docutils" />
+<section id="part">
+<h3>모델 Part<a class="headerlink" href="#part" title="이 표제에 대한 퍼머링크"></a></h3>
+<p>각자 모델 개발하는데, 그 때 효율화 도구</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TODO</span>
+</pre></div>
+</div>
+</section>
+<section id="model-evaluation-offline-test">
+<h3>Model Evaluation(Offline test)<a class="headerlink" href="#model-evaluation-offline-test" title="이 표제에 대한 퍼머링크"></a></h3>
+<p>오프라인 테스트를 왜 하는지?</p>
+<p>어떤 경우에 어떤 지표로 평가할 것인지?</p>
+<ul class="simple">
+<li><p>binary classification</p>
+<ul>
+<li><p>기존의 Train/valid/test 셋으로 구분하여 auc …</p></li>
+</ul>
+</li>
+<li><p>Recommendation</p>
+<ul>
+<li><p>AUC</p></li>
+<li><p>F1 score</p></li>
+<li><p>NDCG</p></li>
+<li><p>IS(Importance Sampling)</p></li>
+<li><p>CIS 등</p></li>
+</ul>
+</li>
+</ul>
+<p>위 지표가 어느 정도 나와야 Offline test를 통과하고 Online test로 넘어갈 수 있는지?</p>
+</section>
+<section id="online-test">
+<h3>Online test<a class="headerlink" href="#online-test" title="이 표제에 대한 퍼머링크"></a></h3>
+<p>A/B test를 수행함에 있어서 적절한 Sample Size는 어느 정도인지?
+그걸 어떤 수식을 통해, 어떤 code로 계산하는지?</p>
+<p>실험 등록은 어떻게 하고, 실험이 진행됨에 따라 모니터링은 어떻게 되는지</p>
+</section>
+<section id="id2">
+<h3>실험 평가<a class="headerlink" href="#id2" title="이 표제에 대한 퍼머링크"></a></h3>
+<p>실험이 진행완료 후 생성되는 리포트의 예시 (이미지)</p>
+<p>주요 지표에 대한 설명은 어떻게 되는지</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="guide.html" class="btn btn-neutral float-left" title="Sphinx 편집 Guideline" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="offline_ab_test.html" class="btn btn-neutral float-right" title="Offline A/B 테스트" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, Customer Analytics, SKT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>battleground.model package &mdash; battleground 0.1 문서</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="genindex.html" />
+    <link rel="search" title="검색" href="search.html" />
+    <link rel="prev" title="battleground.experiment package" href="battleground.experiment.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> battleground
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contents/instruction.html">패키지 설명</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contents/guide.html">Sphinx 편집 Guideline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contents/process.html">활용 Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contents/offline_ab_test.html">Offline A/B 테스트</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contents/online_ab_test.html">Online A/B 테스트</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">APIs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">battleground</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="battleground.html">battleground package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="battleground.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="battleground.experiment.html">battleground.experiment package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">battleground.model package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="battleground.html#module-battleground">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">battleground</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">battleground</a> &raquo;</li>
+          <li><a href="battleground.html">battleground package</a> &raquo;</li>
+      <li>battleground.model package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/battleground.model.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="battleground-model-package">
+<h1>battleground.model package<a class="headerlink" href="#battleground-model-package" title="이 표제에 대한 퍼머링크"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="이 표제에 대한 퍼머링크"></a></h2>
+</section>
+<section id="module-battleground.model.data">
+<span id="battleground-model-data-module"></span><h2>battleground.model.data module<a class="headerlink" href="#module-battleground.model.data" title="이 표제에 대한 퍼머링크"></a></h2>
+</section>
+<section id="module-battleground.model.evalution">
+<span id="battleground-model-evalution-module"></span><h2>battleground.model.evalution module<a class="headerlink" href="#module-battleground.model.evalution" title="이 표제에 대한 퍼머링크"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">battleground.model.evalution.</span></span><span class="sig-name descname"><span class="pre">OffLineTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_col</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reward</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">capping_value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Turn_off_zero</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">print_summary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#battleground.model.evalution.OffLineTest" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Note: The class that helps compare algorithms in offline test. only working binary rewards.
+.. note:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Author</span> <span class="p">:</span> <span class="n">kyunam</span> <span class="o">&lt;</span><span class="n">kyunam</span><span class="nd">@sktelecom</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+<span class="n">Contact</span> <span class="p">:</span> <span class="n">kyunam</span> <span class="o">&lt;</span><span class="n">kyunam</span><span class="nd">@sktelecom</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+<span class="n">CreatedAt</span> <span class="p">:</span> <span class="mi">2022</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">10</span>
+<span class="n">History</span> <span class="p">:</span>
+    <span class="mi">20220310</span> <span class="p">:</span> <span class="n">create</span> <span class="n">the</span> <span class="n">function</span>
+    <span class="mi">20220401</span> <span class="p">:</span> <span class="n">add</span> <span class="n">get_sample_size</span> <span class="n">output</span><span class="p">(</span><span class="n">test</span> <span class="n">period</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.base">
+<span class="sig-name descname"><span class="pre">base</span></span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.base" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>The probability estimated by monte carlo for each user x item of the existing algorithm being compared.
+table example(svc_mgmt_num / item / The probability estimated by monte carlo / reward)
+ci  item_nm          percentile   click_yn
+A   FLO Subs          0.425600     0
+A   WAVVE Subs        0.574400     1
+B   FLO Subs          0.000000     0
+B   WAVVE Subs        1.000000     1</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.target">
+<span class="sig-name descname"><span class="pre">target</span></span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.target" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>The probability estimated by monte carlo for each user x item of the target algorithm to be compared.
+table example(svc_mgmt_num / item / The probability estimated by monte carlo)
+ci  item_nm          percentile
+A   FLO Subs          0.352391
+A   WAVVE Subs        0.647609
+B   FLO Subs          0.574400
+B   WAVVE Subs        0.425600</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.item_col">
+<span class="sig-name descname"><span class="pre">item_col</span></span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.item_col" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>item column name(ex : item_nm)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.user_col">
+<span class="sig-name descname"><span class="pre">user_col</span></span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.user_col" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>user column name(ex : ci)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.reward">
+<span class="sig-name descname"><span class="pre">reward</span></span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.reward" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>reward column name(ex : click_yn)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.Turn_off_zero">
+<span class="sig-name descname"><span class="pre">Turn_off_zero</span></span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.Turn_off_zero" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Whether to execute even when the proportion of rewards is extreme.(ex : True)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>boolen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.capping_value">
+<span class="sig-name descname"><span class="pre">capping_value</span></span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.capping_value" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>hyperparameter refers to limiting the maximum value that a weight can take.(ex. 1.2)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>numeric</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.print_summary">
+<span class="sig-name descname"><span class="pre">print_summary</span></span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.print_summary" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>print summary.(ex. False)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>boolen</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.CIS">
+<span class="sig-name descname"><span class="pre">CIS</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.CIS" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base</strong> (<em>DataFrame</em>) – The probability estimated by monte carlo for each user x item of the existing algorithm being compared.
+table example(svc_mgmt_num / item / The probability estimated by monte carlo / reward)
+ci  item_nm          percentile   click_yn
+A   FLO Subs          0.425600     0
+A   WAVVE Subs        0.574400     1
+B   FLO Subs          0.000000     0
+B   WAVVE Subs        1.000000     1</p></li>
+<li><p><strong>target</strong> (<em>DataFrame</em>) – The probability estimated by monte carlo for each user x item of the target algorithm to be compared.
+table example(svc_mgmt_num / item / The probability estimated by monte carlo)
+ci  item_nm          percentile
+A   FLO Subs          0.352391
+A   WAVVE Subs        0.647609
+B   FLO Subs          0.574400
+B   WAVVE Subs        0.425600</p></li>
+<li><p><strong>item_col</strong> (<em>string</em>) – item column name(ex : item_nm)</p></li>
+<li><p><strong>user_col</strong> (<em>string</em>) – user column name(ex : ci)</p></li>
+<li><p><strong>reward</strong> (<em>string</em>) – reward column name(ex : click_yn)</p></li>
+<li><p><strong>Turn_off_zero</strong> (<em>boolen</em>) – Whether to execute even when the proportion of rewards is extreme.(ex : True)</p></li>
+<li><p><strong>capping_value</strong> (<em>numeric</em>) – Maximum value when calculating CIS.(ex : 100)</p></li>
+<li><p><strong>print_summary</strong> (<em>boolen</em>) – print summary.(ex. False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환값</dt>
+<dd class="field-even"><p>Reward response probability compared to the control algorithm of the target algorithm estimated by each offline A/B algorithm.</p>
+</dd>
+<dt class="field-odd">반환 형식</dt>
+<dd class="field-odd"><p>Expected_CTR (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.IS">
+<span class="sig-name descname"><span class="pre">IS</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.IS" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base</strong> (<em>DataFrame</em>) – The probability estimated by monte carlo for each user x item of the existing algorithm being compared.
+table example(svc_mgmt_num / item / The probability estimated by monte carlo / reward)
+ci  item_nm          percentile   click_yn
+A   FLO Subs          0.425600     0
+A   WAVVE Subs        0.574400     1
+B   FLO Subs          0.000000     0
+B   WAVVE Subs        1.000000     1</p></li>
+<li><p><strong>target</strong> (<em>DataFrame</em>) – The probability estimated by monte carlo for each user x item of the target algorithm to be compared.
+table example(svc_mgmt_num / item / The probability estimated by monte carlo)
+ci  item_nm          percentile
+A   FLO Subs          0.352391
+A   WAVVE Subs        0.647609
+B   FLO Subs          0.574400
+B   WAVVE Subs        0.425600</p></li>
+<li><p><strong>item_col</strong> (<em>string</em>) – item column name(ex : item_nm)</p></li>
+<li><p><strong>user_col</strong> (<em>string</em>) – user column name(ex : ci)</p></li>
+<li><p><strong>reward</strong> (<em>string</em>) – reward column name(ex : click_yn)</p></li>
+<li><p><strong>Turn_off_zero</strong> (<em>boolen</em>) – Whether to execute even when the proportion of rewards is extreme.(ex : True)</p></li>
+<li><p><strong>print_summary</strong> (<em>boolen</em>) – print summary.(ex. False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환값</dt>
+<dd class="field-even"><p>Reward response probability compared to the control algorithm of the target algorithm estimated by each offline A/B algorithm.</p>
+</dd>
+<dt class="field-odd">반환 형식</dt>
+<dd class="field-odd"><p>Expected_CTR (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.NCIS">
+<span class="sig-name descname"><span class="pre">NCIS</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.NCIS" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base</strong> (<em>DataFrame</em>) – The probability estimated by monte carlo for each user x item of the existing algorithm being compared.
+table example(svc_mgmt_num / item / The probability estimated by monte carlo / reward)
+ci  item_nm          percentile   click_yn
+A   FLO Subs          0.425600     0
+A   WAVVE Subs        0.574400     1
+B   FLO Subs          0.000000     0
+B   WAVVE Subs        1.000000     1</p></li>
+<li><p><strong>target</strong> (<em>DataFrame</em>) – The probability estimated by monte carlo for each user x item of the target algorithm to be compared.
+table example(svc_mgmt_num / item / The probability estimated by monte carlo)
+ci  item_nm          percentile
+A   FLO Subs          0.352391
+A   WAVVE Subs        0.647609
+B   FLO Subs          0.574400
+B   WAVVE Subs        0.425600</p></li>
+<li><p><strong>item_col</strong> (<em>string</em>) – item column name(ex : item_nm)</p></li>
+<li><p><strong>user_col</strong> (<em>string</em>) – user column name(ex : ci)</p></li>
+<li><p><strong>reward</strong> (<em>string</em>) – reward column name(ex : click_yn)</p></li>
+<li><p><strong>Turn_off_zero</strong> (<em>boolen</em>) – Whether to execute even when the proportion of rewards is extreme.(ex : True)</p></li>
+<li><p><strong>print_summary</strong> (<em>boolen</em>) – print summary.(ex. False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환값</dt>
+<dd class="field-even"><p>Reward response probability compared to the control algorithm of the target algorithm estimated by each offline A/B algorithm.</p>
+</dd>
+<dt class="field-odd">반환 형식</dt>
+<dd class="field-odd"><p>Expected_CTR (float)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.init_check_info">
+<span class="sig-name descname"><span class="pre">init_check_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.init_check_info" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="battleground.model.evalution.OffLineTest.init_values">
+<span class="sig-name descname"><span class="pre">init_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#battleground.model.evalution.OffLineTest.init_values" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-battleground.model.serve">
+<span id="battleground-model-serve-module"></span><h2>battleground.model.serve module<a class="headerlink" href="#module-battleground.model.serve" title="이 표제에 대한 퍼머링크"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="battleground.model.serve.ExampleClass">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">battleground.model.serve.</span></span><span class="sig-name descname"><span class="pre">ExampleClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#battleground.model.serve.ExampleClass" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The summary line for a class docstring should fit on one line.</p>
+<p>If the class has public attributes, they may be documented here
+in an <code class="docutils literal notranslate"><span class="pre">Attributes</span></code> section and follow the same formatting as a
+function’s <code class="docutils literal notranslate"><span class="pre">Args</span></code> section. Alternatively, attributes may be documented
+inline with the attribute’s declaration (see __init__ method below).</p>
+<p>Properties created with the <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> decorator should be documented
+in the property’s getter method.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.serve.ExampleClass.attr1">
+<span class="sig-name descname"><span class="pre">attr1</span></span><a class="headerlink" href="#battleground.model.serve.ExampleClass.attr1" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Description of <cite>attr1</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.serve.ExampleClass.attr2">
+<span class="sig-name descname"><span class="pre">attr2</span></span><a class="headerlink" href="#battleground.model.serve.ExampleClass.attr2" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Description of <cite>attr2</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code>, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.serve.ExampleClass.attr3">
+<span class="sig-name descname"><span class="pre">attr3</span></span><a class="headerlink" href="#battleground.model.serve.ExampleClass.attr3" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Doc comment <em>inline</em> with attribute</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.serve.ExampleClass.attr4">
+<span class="sig-name descname"><span class="pre">attr4</span></span><a class="headerlink" href="#battleground.model.serve.ExampleClass.attr4" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Doc comment <em>before</em> attribute, with type specified</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list(str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="battleground.model.serve.ExampleClass.attr5">
+<span class="sig-name descname"><span class="pre">attr5</span></span><a class="headerlink" href="#battleground.model.serve.ExampleClass.attr5" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Docstring <em>after</em> attribute, with type specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="battleground.model.serve.ExampleClass.example_method">
+<span class="sig-name descname"><span class="pre">example_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#battleground.model.serve.ExampleClass.example_method" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Class methods are similar to regular functions.</p>
+<div class="admonition note">
+<p class="admonition-title">참고</p>
+<p>Do not include the <cite>self</cite> parameter in the <code class="docutils literal notranslate"><span class="pre">Args</span></code> section.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param1</strong> – The first parameter.</p></li>
+<li><p><strong>param2</strong> – The second parameter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환값</dt>
+<dd class="field-even"><p>True if successful, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="battleground.model.serve.ExampleClass.readonly_property">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">readonly_property</span></span><a class="headerlink" href="#battleground.model.serve.ExampleClass.readonly_property" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Properties should be documented in their getter method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="battleground.model.serve.ExampleClass.readwrite_property">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">readwrite_property</span></span><a class="headerlink" href="#battleground.model.serve.ExampleClass.readwrite_property" title="이 정의에 대한 퍼머링크"></a></dt>
+<dd><p>Properties with both a getter and setter
+should only be documented in their getter method.</p>
+<p>If the setter method contains notable behavior, it should be
+mentioned here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>list(str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-battleground.model.train">
+<span id="battleground-model-train-module"></span><h2>battleground.model.train module<a class="headerlink" href="#module-battleground.model.train" title="이 표제에 대한 퍼머링크"></a></h2>
+</section>
+<section id="battleground-model-update-module">
+<h2>battleground.model.update module<a class="headerlink" href="#battleground-model-update-module" title="이 표제에 대한 퍼머링크"></a></h2>
+</section>
+<section id="module-battleground.model">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-battleground.model" title="이 표제에 대한 퍼머링크"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="battleground.experiment.html" class="btn btn-neutral float-left" title="battleground.experiment package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 저작권 2022, Customer Analytics, SKT.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
